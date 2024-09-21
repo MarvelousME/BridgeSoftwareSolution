@@ -1,0 +1,46 @@
+{
+    "mqtt": {
+        "brokers": [
+            {
+                "id": "mqtt-broker",
+                "type": "mqtt-broker",
+                "name": "Default MQTT Broker",
+                "broker": "localhost",
+                "port": 1883,
+                "username": "mqtt_user",
+                "password": "mqtt_password",
+                "clientId": "node-red-client",
+                "keepAlive": 60,
+                "cleanSession": true
+            }
+        ],
+        "subscriptions": [
+            {
+                "id": "mqtt-subscription",
+                "type": "mqtt in",
+                "name": "MQTT Subscription",
+                "topic": "sensor/data",
+                "qos": 1,
+                "broker": "mqtt-broker",
+                "x": 100,
+                "y": 100,
+                "wires": [["mqtt-output"]]
+            }
+        ],
+        "publishers": [
+            {
+                "id": "mqtt-publisher",
+                "type": "mqtt out",
+                "name": "MQTT Publisher",
+                "topic": "actuator/control",
+                "qos": 1,
+                "retain": false,
+                "broker": "mqtt-broker",
+                "x": 200,
+                "y": 200,
+                "wires": []
+            }
+        ]
+    }
+}
+

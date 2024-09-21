@@ -1,0 +1,59 @@
+{
+    "node-red": {
+        "uiPort": 1880,  // Port where the Node-RED UI will be available
+        "uiHost": "0.0.0.0",  // Bind Node-RED to all network interfaces
+        "logging": {
+            "level": "info",
+            "metrics": false,
+            "console": {
+                "enabled": true,
+                "level": "info"
+            },
+            "file": {
+                "enabled": false
+            }
+        },
+        "mqtt": {
+            "broker": {
+                "host": "localhost",
+                "port": 1883,
+                "username": "mqtt_user",
+                "password": "mqtt_password",
+                "clientId": "node-red-client"
+            }
+        },
+        "flows": [
+            {
+                "id": "1",
+                "type": "mqtt in",
+                "name": "MQTT Input",
+                "topic": "sensor/data",
+                "qos": "2",
+                "broker": "mqtt-broker",
+                "x": 100,
+                "y": 100,
+                "wires": [["2"]]
+            },
+            {
+                "id": "2",
+                "type": "debug",
+                "name": "Debug Output",
+                "active": true,
+                "tosidebar": true,
+                "toconsole": true,
+                "x": 300,
+                "y": 100,
+                "wires": []
+            }
+        ],
+        "settings": {
+            "editorTheme": {
+                "projects": {
+                    "enabled": true,
+                    "folder": "projects"
+                }
+            }
+        }
+    }
+}
+

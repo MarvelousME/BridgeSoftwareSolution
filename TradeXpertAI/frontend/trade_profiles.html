@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Profile</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="scripts.js" defer></script> <!-- Link to your JavaScript file -->
+    <style>
+        /* Basic styling for the trade profile page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            flex: 1;
+            padding: 1em;
+            overflow-y: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .trade-header {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 1em;
+            margin-bottom: 2em;
+        }
+        .trade-header h1 {
+            margin: 0;
+        }
+        .trade-details, .trade-metrics {
+            margin-bottom: 2em;
+        }
+        .trade-details h2, .trade-metrics h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .trade-details p, .trade-metrics p {
+            margin: 0.5em 0;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 1em;
+        }
+        .action-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .action-buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trade Profile</h1>
+    </header>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="trade_profile.html">Trade Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="trade-header">
+                <h1>Trade ID: 123456</h1>
+                <p>Date: September 1, 2024</p>
+                <p>Asset: Stock XYZ</p>
+            </div>
+            <section class="trade-details">
+                <h2>Trade Details</h2>
+                <p><strong>Trade Type:</strong> Buy</p>
+                <p><strong>Quantity:</strong> 100 shares</p>
+                <p><strong>Price:</strong> $50.00</p>
+                <p><strong>Total Cost:</strong> $5000.00</p>
+                <p><strong>Status:</strong> Completed</p>
+            </section>
+            <section class="trade-metrics">
+                <h2>Performance Metrics</h2>
+                <p><strong>Current Price:</strong> $55.00</p>
+                <p><strong>Market Value:</strong> $5500.00</p>
+                <p><strong>Profit/Loss:</strong> $500.00 (10%)</p>
+                <p><strong>Duration:</strong> 30 days</p>
+            </section>
+            <div class="action-buttons">
+                <button>Edit Trade</button>
+                <button>Delete Trade</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+</body>
+</html>
+

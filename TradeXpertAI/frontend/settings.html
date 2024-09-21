@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="scripts.js" defer></script> <!-- Link to your JavaScript file -->
+    <style>
+        /* Basic styling for the settings page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            flex: 1;
+            padding: 1em;
+            overflow-y: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .settings-section {
+            margin-bottom: 2em;
+        }
+        .settings-section h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .settings-section label {
+            display: block;
+            margin: 0.5em 0;
+        }
+        .settings-section input[type="text"],
+        .settings-section input[type="email"],
+        .settings-section input[type="password"],
+        .settings-section select {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .settings-section button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .settings-section button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Settings</h1>
+    </header>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="trade_profile.html">Trade Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+    <main>
+        <div class="container">
+            <section class="settings-section">
+                <h2>Profile Settings</h2>
+                <form id="profile-settings-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="JohnDoe">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="johndoe@example.com">
+
+                    <label for="password">New Password:</label>
+                    <input type="password" id="password" name="password" placeholder="********">
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="********">
+
+                    <button type="submit">Save Changes</button>
+                </form>
+            </section>
+
+            <section class="settings-section">
+                <h2>Notification Preferences</h2>
+                <form id="notification-settings-form">
+                    <label for="email-notifications">Email Notifications:</label>
+                    <select id="email-notifications" name="email-notifications">
+                        <option value="enabled" selected>Enabled</option>
+                        <option value="disabled">Disabled</option>
+                    </select>
+
+                    <label for="sms-notifications">SMS Notifications:</label>
+                    <select id="sms-notifications" name="sms-notifications">
+                        <option value="enabled">Enabled</option>
+                        <option value="disabled" selected>Disabled</option>
+                    </select>
+
+                    <button type="submit">Update Preferences</button>
+                </form>
+            </section>
+
+            <section class="settings-section">
+                <h2>Account Management</h2>
+                <form id="account-management-form">
+                    <label for="deactivate-account">Deactivate Account:</label>
+                    <button type="button" id="deactivate-account">Deactivate</button>
+                    
+                    <p style="margin-top: 1em;">If you deactivate your account, you will not be able to access it until it is reactivated.</p>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+</body>
+</html>
+
